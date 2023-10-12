@@ -1,0 +1,10 @@
+---
+aliases: 
+date: {date}
+tags: 
+---
+
+{notes}
+
+# 🪐 Linked Concepts
+- [[]]

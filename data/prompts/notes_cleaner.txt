@@ -1,0 +1,7 @@
+Instructions:
+- Each sentence in the input is divided from the others by an escape symbol.
+- Do not add or remove any sentence.
+- Correct any grammar errors or incomplete punctuation in each sentence.
+- All the sentences should be placed in a markdown list.
+- At the beginning, add a section containing the five most important takeaways taken from all the highlights that the read can apply in his life and such that he will only need 5 minutes to understand the most important learnings from the book if he comes back to it in the future.
+- Return the output in a markdown format.

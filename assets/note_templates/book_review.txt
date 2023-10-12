@@ -1,0 +1,23 @@
+---
+date: {date}
+tags: #book 
+---
+title: {title}
+author(s): {author}
+
+# 🚀 What I Learned
+- a
+- b
+- c
+
+# ✍️ Favorite Quotes
+- a
+- b
+- c
+
+# 📒 Notes
+
+{notes}
+ 
+# 🪐 Linked concepts
+- [[]]
