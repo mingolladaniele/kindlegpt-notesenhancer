@@ -126,7 +126,6 @@ def process_email(service, emails_filter):
     for book_date in book_data_list:
         n_token_input = num_tokens_from_string(book_date["notes"])
         total_tokens = n_token_input + n_token_instructions
-        print(total_tokens)
         if total_tokens <= 8000:
             if total_tokens <= 2000:
                 model_name = "gpt-3.5-turbo"
