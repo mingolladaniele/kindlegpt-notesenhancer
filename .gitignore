@@ -1,8 +1,9 @@
 # Google's tokens
 auth/
 
-# Notes
+# Project's file
 data/files_to_upload
+config.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

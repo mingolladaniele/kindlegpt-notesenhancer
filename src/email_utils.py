@@ -121,13 +121,20 @@ def process_email(service, emails_filter):
     n_token_instructions = num_tokens_from_string(
         get_string_from_file(config.DIR_GPT_PROMPTS, config.DEFAULT_PROMPT)
     )
+    # default model
+    model_name = "gpt-3.5-turbo-16k"
     for book_date in book_data_list:
         n_token_input = num_tokens_from_string(book_date["notes"])
-        if n_token_input + n_token_instructions <= 2000:
+        total_tokens = n_token_input + n_token_instructions
+        print(total_tokens)
+        if total_tokens <= 8000:
+            if total_tokens <= 2000:
+                model_name = "gpt-3.5-turbo"
             print(f"Processing {book_date['title']}...")
             book_date["notes"] = gpt_note_processor(
                 prompt=book_date["notes"],
-                model_instructions_filename=config.DEFAULT_PROMPT,
+                model_name=model_name,
+                model_instructions_filename=config.DEFAULT_PROMPT
             )
             final_note = text_into_template(
                 template_filename="book_review.txt", template_variables=book_date
