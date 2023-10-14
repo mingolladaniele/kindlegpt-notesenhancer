@@ -17,12 +17,13 @@ Config = namedtuple(
         "OPENAI_API_KEY",
         "DIR_GPT_PROMPTS",
         "DEFAULT_PROMPT",
+        "DEFAULT_TEMPLATE",
     ],
 )
 
 # Configuration values
 config = Config(
-    # Google authentication
+    # Google authentication - DON'T TOUCH
     SCOPES=[
         "https://www.googleapis.com/auth/gmail.modify",
         "https://www.googleapis.com/auth/drive",
@@ -31,7 +32,7 @@ config = Config(
     TOKEN_FILENAME="token.json",
     AUTH_DIR="./auth/",
     # Email settings
-    SENDER_MAIL="XXX",
+    SENDER_MAIL="",
     EMAIL_FILTER="is:unread has:attachment filename:html",
     # Google Drive settings
     INPUT_DIR="./data/files_to_upload/",
@@ -40,6 +41,7 @@ config = Config(
     OPENAI_API_KEY="",
     DIR_GPT_PROMPTS="./data/prompts/",
     DEFAULT_PROMPT="notes_cleaner.txt",
+    DEFAULT_TEMPLATE="book_review.txt",
 )
 
 

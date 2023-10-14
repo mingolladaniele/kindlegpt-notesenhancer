@@ -221,7 +221,7 @@ def process_email(service, emails_filter):
                 model_instructions_filename=config.DEFAULT_PROMPT,
             )
             final_note = text_into_template(
-                template_filename="book_review.txt", template_variables=book_date
+                template_filename=config.DEFAULT_TEMPLATE, template_variables=book_date
             )
             save_string_to_file(
                 file_name=book_date["title"],
