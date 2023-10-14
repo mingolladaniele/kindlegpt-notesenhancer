@@ -1,9 +1,9 @@
 # Google's tokens
-auth/
+auth/*
 
 # Project's file
-data/files_to_upload
-config.py
+data/files_to_upload/*
+!*.gitkeep
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

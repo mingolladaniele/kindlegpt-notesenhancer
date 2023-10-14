@@ -6,7 +6,7 @@ from src.html_utils import extract_book_info
 from src.text_manipulation_utils import text_into_template
 from src.IO_utils import save_string_to_file, get_string_from_file
 from src.chatgpt_utils import gpt_note_processor, num_tokens_from_string
-import config
+from config import config
 
 # Pattern to extract the sender's email
 pattern_ext_email = r"<(.*?)>"

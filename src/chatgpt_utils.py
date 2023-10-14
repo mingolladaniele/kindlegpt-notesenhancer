@@ -1,7 +1,6 @@
 import os
 import openai
-from dotenv import load_dotenv
-import config
+from config import config
 import tiktoken
 
 
@@ -12,9 +11,7 @@ def num_tokens_from_string(string: str, encoding_name: str = "cl100k_base") -> i
 
 
 def gpt_note_processor(prompt, model_name, model_instructions_filename="notes_cleaner.txt"):
-    # Load OpenAI key
-    load_dotenv()
-    openai.api_key = os.environ.get("OPENAI_API_KEY")
+    openai.api_key = config.OPENAI_API_KEY
 
     # Read the model instructions
     model_instructions_filepath = os.path.join(

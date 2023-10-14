@@ -2,10 +2,12 @@ from src.google_utils import initialize_google_service
 from src.email_utils import process_email
 from src.drive_utils import upload_book_notes_to_drive
 import time
-import config
+from config import config, check_configuration
 
 
 def main():
+    # Check configuration before starting
+    check_configuration(config)
     gmail_service = initialize_google_service("gmail", "v1")
     drive_service = initialize_google_service("drive", "v3")
     while 1:
