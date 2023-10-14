@@ -41,7 +41,7 @@ Before using this project, you need to set up your development environment. Here
 5. **Configuration**: In the `config.py` file, you should set two important values:
     - `OPENAI_API_KEY`: You can obtain an API key from OpenAI (more info here: [OpenAI API](https://openai.com/blog/openai-api)).
     - `OUTPUT_DIR_ID`: This is the ID of the folder on your Google Drive where your processed notes will be uploaded. *The Google Drive folder must be in the same Google account as the email being monitored by the script. To find the Folder ID, navigate to the folder in Google Drive and copy the ID found in the URL. It's everything that comes after "folder/". For example, if the URL was "https://drive.google.com/drive/folders/1234," then the Folder ID would be `1234`.
-    - 'SENDER_EMAIL': Add the Google Mail address where you expect to receive the notes. This email will be used to alert you when your notes exceed the token threshold of ChatGPT.
+    - `SENDER_EMAIL`: Add the Google Mail address where you expect to receive the notes. This email will be used to alert you when your notes exceed the token threshold of ChatGPT.
 
 6. **Set Up Google Workspace API**: Follow this tutorial to run the script and enable it to call a Google Workspace API: [Google API Quickstart](https://developers.google.com/gmail/api/quickstart/python). Be sure to place the `credentials.json` file in the `./auth` directory.
 
