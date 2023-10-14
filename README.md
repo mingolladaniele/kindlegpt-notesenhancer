@@ -1,5 +1,7 @@
 # KindleGPT - NotesEnhancer - For Obsidian
-![flow](assets/flow.png)
+<p align="center">
+  <img width="460" height="300" src="./assets/flow.png">
+</p>
 
 ## Problem Explanation
 
