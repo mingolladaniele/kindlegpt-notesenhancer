@@ -1,17 +1,45 @@
+"""HTML utilities."""
 from bs4 import BeautifulSoup
 
 
 def extract_title(html_content):
+    """
+    Extract the title from the HTML content.
+
+    Args:
+        html_content (BeautifulSoup): Parsed HTML content.
+
+    Returns:
+        str: The title of the book.
+    """
     # Extract the title from the HTML content
     return html_content.find("div", class_="bookTitle").text.strip()
 
 
 def extract_author(html_content):
+    """
+    Extract the author's name from HTML content.
+
+    Args:
+        html_content (BeautifulSoup): Parsed HTML content.
+
+    Returns:
+        str: The author's name.
+    """
     # Extract the author's name from HTML content
     return html_content.find("div", class_="authors").text.strip()
 
 
 def extract_notes(html_content):
+    """
+    Extract notes from HTML content.
+
+    Args:
+        html_content (BeautifulSoup): Parsed HTML content.
+
+    Returns:
+        str: Combined notes separated by line breaks.
+    """
     # Find all elements with the class 'm_noteHeading'
     note_headings = html_content.find_all("div", class_="noteHeading")
 
@@ -43,6 +71,15 @@ def extract_notes(html_content):
 
 
 def extract_book_info(file_data):
+    """
+    Extract book information from HTML content.
+
+    Args:
+        file_data (bytes): HTML content as bytes.
+
+    Returns:
+        tuple: A tuple containing the book title, author, and note text.
+    """
     # Parsing HTML with BeautifulSoup
     html_content = BeautifulSoup(file_data, "html.parser")
 

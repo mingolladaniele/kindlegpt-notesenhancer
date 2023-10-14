@@ -1,0 +1,2 @@
+- Creare Google Cloud Project -> LINK: https://developers.google.com/gmail/api/quickstart/python
+- Inserire indirizzo email che volete monitorare

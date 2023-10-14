@@ -1,16 +1,42 @@
+"""ChatGPT utilities."""
 import os
+
 import openai
-from config import config
 import tiktoken
+
+from config import config
 
 
 def num_tokens_from_string(string: str, encoding_name: str = "cl100k_base") -> int:
+    """
+    Calculate the number of tokens in the given string.
+
+    Args:
+        string (str): The input text string.
+        encoding_name (str): The name of the token encoding to use (default is "cl100k_base").
+
+    Returns:
+        int: The number of tokens in the input string.
+    """
     encoding = tiktoken.get_encoding(encoding_name)
     num_tokens = len(encoding.encode(string))
     return num_tokens
 
 
-def gpt_note_processor(prompt, model_name, model_instructions_filename="notes_cleaner.txt"):
+def gpt_note_processor(
+    prompt, model_name, model_instructions_filename="notes_cleaner.txt"
+):
+    """
+    Generate a response from the ChatGPT model based on the provided prompt.
+
+    Args:
+        prompt (str): The user's input prompt.
+        model_name (str): The name of the ChatGPT model to use.
+        model_instructions_filename (str): The filename of model instructions (default is "notes_cleaner.txt").
+
+    Returns:
+        str: The generated response from the ChatGPT model.
+    """
     openai.api_key = config.OPENAI_API_KEY
 
     # Read the model instructions

@@ -1,6 +1,6 @@
 ---
 date: {date}
-tags: #book 
+tags: #book
 ---
 title: {title}
 author(s): {author}
@@ -18,6 +18,6 @@ author(s): {author}
 # 📒 Notes
 
 {notes}
- 
+
 # 🪐 Linked concepts
 - [[]]

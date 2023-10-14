@@ -1,12 +1,26 @@
+"""Google authentication utilities."""
+
 import os
-from google.oauth2.credentials import Credentials
+
 from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
+
 from config import config
 
 
 def initialize_google_service(api_name, api_version):
+    """
+    Initialize and authenticate with a Google API service.
+
+    Args:
+        api_name (str): The name of the Google API (e.g., "gmail", "drive").
+        api_version (str): The version of the API to use.
+
+    Returns:
+        googleapiclient.discovery.Resource: The authenticated Google API service.
+    """
     creds = None
     credentials_filename = config.CREDENTIALS_FILENAME
     token_filename = config.TOKEN_FILENAME

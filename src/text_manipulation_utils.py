@@ -1,9 +1,20 @@
-import os
+"""Text manipulation utilities."""
+
 import datetime
+import os
 import re
 
 
 def clean_filename_string(i_string):
+    """
+    Clean a string to remove special characters that are not safe for filenames.
+
+    Args:
+        i_string (str): The input string to be cleaned.
+
+    Returns:
+        str: The cleaned string with special characters removed or replaced.
+    """
     symbols_to_remove = [
         "#",
         "%",
@@ -36,6 +47,16 @@ def clean_filename_string(i_string):
 
 
 def text_into_template(template_filename, template_variables):
+    """
+    Generate a text document from a template file by replacing placeholders.
+
+    Args:
+        template_filename (str): The filename of the template file.
+        template_variables (dict): A dictionary of variables to replace in the template.
+
+    Returns:
+        str: The text document with placeholders replaced by their values.
+    """
     template_folder = "./assets/note_templates/"
     template_path = os.path.join(template_folder, template_filename)
 

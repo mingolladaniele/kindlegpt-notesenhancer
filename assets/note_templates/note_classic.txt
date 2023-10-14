@@ -1,7 +1,7 @@
 ---
-aliases: 
+aliases:
 date: {date}
-tags: 
+tags:
 ---
 
 {notes}

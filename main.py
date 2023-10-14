@@ -1,11 +1,23 @@
-from src.google_utils import initialize_google_service
-from src.email_utils import process_email
-from src.drive_utils import upload_book_notes_to_drive
+"""Process emails and upload book notes to Google Drive."""
 import time
-from config import config, check_configuration
+
+from config import check_configuration, config
+from src.drive_utils import upload_book_notes_to_drive
+from src.email_utils import process_email
+from src.google_utils import initialize_google_service
 
 
 def main():
+    """
+    Process emails and upload book notes to Google Drive.
+
+    The function checks the configuration, initializes Google services, and continuously
+    processes emails using Gmail and uploads book notes to Google Drive. It monitors the
+    inbox for new emails matching the provided filter and processes them accordingly.
+
+    Returns:
+        None
+    """
     # Check configuration before starting
     check_configuration(config)
     gmail_service = initialize_google_service("gmail", "v1")
@@ -28,4 +40,7 @@ def main():
 
 
 if __name__ == "__main__":
+    """
+    Main function.
+    """
     main()
